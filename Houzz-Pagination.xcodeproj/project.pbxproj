@@ -9,21 +9,35 @@
 /* Begin PBXBuildFile section */
 		D0A791552C342B34007EBCAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A791542C342B34007EBCAB /* AppDelegate.swift */; };
 		D0A791572C342B34007EBCAB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A791562C342B34007EBCAB /* SceneDelegate.swift */; };
-		D0A791592C342B34007EBCAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A791582C342B34007EBCAB /* ViewController.swift */; };
+		D0A791592C342B34007EBCAB /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A791582C342B34007EBCAB /* UserViewController.swift */; };
 		D0A7915C2C342B34007EBCAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0A7915A2C342B34007EBCAB /* Main.storyboard */; };
 		D0A7915E2C342B35007EBCAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0A7915D2C342B35007EBCAB /* Assets.xcassets */; };
 		D0A791612C342B35007EBCAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0A7915F2C342B35007EBCAB /* LaunchScreen.storyboard */; };
+		D0A791692C342B6F007EBCAB /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A791682C342B6F007EBCAB /* HTTPClient.swift */; };
+		D0A7916B2C342B89007EBCAB /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A7916A2C342B89007EBCAB /* RequestType.swift */; };
+		D0A7916D2C342B9B007EBCAB /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A7916C2C342B9B007EBCAB /* URLSessionHTTPClient.swift */; };
+		D0A791702C342BBC007EBCAB /* UserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A7916F2C342BBC007EBCAB /* UserRequest.swift */; };
+		D0A791722C342D55007EBCAB /* UserRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A791712C342D55007EBCAB /* UserRemoteRepository.swift */; };
+		D0A791742C342E2A007EBCAB /* UserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A791732C342E2A007EBCAB /* UserUseCase.swift */; };
+		D0A791762C342ED8007EBCAB /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A791752C342ED8007EBCAB /* UserViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D0A791512C342B34007EBCAB /* Houzz-Pagination.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Houzz-Pagination.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0A791542C342B34007EBCAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0A791562C342B34007EBCAB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D0A791582C342B34007EBCAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D0A791582C342B34007EBCAB /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		D0A7915B2C342B34007EBCAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D0A7915D2C342B35007EBCAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0A791602C342B35007EBCAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0A791622C342B35007EBCAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0A791682C342B6F007EBCAB /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		D0A7916A2C342B89007EBCAB /* RequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
+		D0A7916C2C342B9B007EBCAB /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
+		D0A7916F2C342BBC007EBCAB /* UserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequest.swift; sourceTree = "<group>"; };
+		D0A791712C342D55007EBCAB /* UserRemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRemoteRepository.swift; sourceTree = "<group>"; };
+		D0A791732C342E2A007EBCAB /* UserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUseCase.swift; sourceTree = "<group>"; };
+		D0A791752C342ED8007EBCAB /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +72,28 @@
 			children = (
 				D0A791542C342B34007EBCAB /* AppDelegate.swift */,
 				D0A791562C342B34007EBCAB /* SceneDelegate.swift */,
-				D0A791582C342B34007EBCAB /* ViewController.swift */,
+				D0A791582C342B34007EBCAB /* UserViewController.swift */,
+				D0A7916E2C342BA1007EBCAB /* Network Layer */,
 				D0A7915A2C342B34007EBCAB /* Main.storyboard */,
 				D0A7915D2C342B35007EBCAB /* Assets.xcassets */,
 				D0A7915F2C342B35007EBCAB /* LaunchScreen.storyboard */,
 				D0A791622C342B35007EBCAB /* Info.plist */,
+				D0A7916F2C342BBC007EBCAB /* UserRequest.swift */,
+				D0A791712C342D55007EBCAB /* UserRemoteRepository.swift */,
+				D0A791732C342E2A007EBCAB /* UserUseCase.swift */,
+				D0A791752C342ED8007EBCAB /* UserViewModel.swift */,
 			);
 			path = "Houzz-Pagination";
+			sourceTree = "<group>";
+		};
+		D0A7916E2C342BA1007EBCAB /* Network Layer */ = {
+			isa = PBXGroup;
+			children = (
+				D0A791682C342B6F007EBCAB /* HTTPClient.swift */,
+				D0A7916A2C342B89007EBCAB /* RequestType.swift */,
+				D0A7916C2C342B9B007EBCAB /* URLSessionHTTPClient.swift */,
+			);
+			path = "Network Layer";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +167,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0A791592C342B34007EBCAB /* ViewController.swift in Sources */,
+				D0A791722C342D55007EBCAB /* UserRemoteRepository.swift in Sources */,
+				D0A791592C342B34007EBCAB /* UserViewController.swift in Sources */,
 				D0A791552C342B34007EBCAB /* AppDelegate.swift in Sources */,
+				D0A791762C342ED8007EBCAB /* UserViewModel.swift in Sources */,
+				D0A791692C342B6F007EBCAB /* HTTPClient.swift in Sources */,
 				D0A791572C342B34007EBCAB /* SceneDelegate.swift in Sources */,
+				D0A791742C342E2A007EBCAB /* UserUseCase.swift in Sources */,
+				D0A7916B2C342B89007EBCAB /* RequestType.swift in Sources */,
+				D0A7916D2C342B9B007EBCAB /* URLSessionHTTPClient.swift in Sources */,
+				D0A791702C342BBC007EBCAB /* UserRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
