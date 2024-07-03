@@ -70,30 +70,54 @@
 		D0A791532C342B34007EBCAB /* Houzz-Pagination */ = {
 			isa = PBXGroup;
 			children = (
+				D0A791792C34E6BA007EBCAB /* Presenter */,
+				D0A791772C34E69E007EBCAB /* Use Case */,
+				D0A791782C34E6AC007EBCAB /* Entity */,
+				D0A7916E2C342BA1007EBCAB /* Network */,
 				D0A791542C342B34007EBCAB /* AppDelegate.swift */,
 				D0A791562C342B34007EBCAB /* SceneDelegate.swift */,
-				D0A791582C342B34007EBCAB /* UserViewController.swift */,
-				D0A7916E2C342BA1007EBCAB /* Network Layer */,
-				D0A7915A2C342B34007EBCAB /* Main.storyboard */,
 				D0A7915D2C342B35007EBCAB /* Assets.xcassets */,
 				D0A7915F2C342B35007EBCAB /* LaunchScreen.storyboard */,
+				D0A7915A2C342B34007EBCAB /* Main.storyboard */,
 				D0A791622C342B35007EBCAB /* Info.plist */,
-				D0A7916F2C342BBC007EBCAB /* UserRequest.swift */,
-				D0A791712C342D55007EBCAB /* UserRemoteRepository.swift */,
-				D0A791732C342E2A007EBCAB /* UserUseCase.swift */,
-				D0A791752C342ED8007EBCAB /* UserViewModel.swift */,
 			);
 			path = "Houzz-Pagination";
 			sourceTree = "<group>";
 		};
-		D0A7916E2C342BA1007EBCAB /* Network Layer */ = {
+		D0A7916E2C342BA1007EBCAB /* Network */ = {
 			isa = PBXGroup;
 			children = (
 				D0A791682C342B6F007EBCAB /* HTTPClient.swift */,
 				D0A7916A2C342B89007EBCAB /* RequestType.swift */,
 				D0A7916C2C342B9B007EBCAB /* URLSessionHTTPClient.swift */,
 			);
-			path = "Network Layer";
+			path = Network;
+			sourceTree = "<group>";
+		};
+		D0A791772C34E69E007EBCAB /* Use Case */ = {
+			isa = PBXGroup;
+			children = (
+				D0A791732C342E2A007EBCAB /* UserUseCase.swift */,
+			);
+			path = "Use Case";
+			sourceTree = "<group>";
+		};
+		D0A791782C34E6AC007EBCAB /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D0A7916F2C342BBC007EBCAB /* UserRequest.swift */,
+				D0A791712C342D55007EBCAB /* UserRemoteRepository.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		D0A791792C34E6BA007EBCAB /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D0A791582C342B34007EBCAB /* UserViewController.swift */,
+				D0A791752C342ED8007EBCAB /* UserViewModel.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
