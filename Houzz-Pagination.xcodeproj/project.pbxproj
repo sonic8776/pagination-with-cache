@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D04CB4F42C4014E400695DFB /* CacheStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04CB4F12C4014E300695DFB /* CacheStoreProtocol.swift */; };
+		D04CB4F52C4014E400695DFB /* RetrieveStoreResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04CB4F22C4014E400695DFB /* RetrieveStoreResult.swift */; };
+		D04CB4F62C4014E400695DFB /* CacheStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04CB4F32C4014E400695DFB /* CacheStore.swift */; };
 		D0A791552C342B34007EBCAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A791542C342B34007EBCAB /* AppDelegate.swift */; };
 		D0A791572C342B34007EBCAB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A791562C342B34007EBCAB /* SceneDelegate.swift */; };
 		D0A791592C342B34007EBCAB /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A791582C342B34007EBCAB /* UserViewController.swift */; };
@@ -23,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D04CB4F12C4014E300695DFB /* CacheStoreProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheStoreProtocol.swift; sourceTree = "<group>"; };
+		D04CB4F22C4014E400695DFB /* RetrieveStoreResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetrieveStoreResult.swift; sourceTree = "<group>"; };
+		D04CB4F32C4014E400695DFB /* CacheStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheStore.swift; sourceTree = "<group>"; };
 		D0A791512C342B34007EBCAB /* Houzz-Pagination.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Houzz-Pagination.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0A791542C342B34007EBCAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0A791562C342B34007EBCAB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +57,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D04CB4F02C4014C200695DFB /* CacheStore */ = {
+			isa = PBXGroup;
+			children = (
+				D04CB4F32C4014E400695DFB /* CacheStore.swift */,
+				D04CB4F12C4014E300695DFB /* CacheStoreProtocol.swift */,
+				D04CB4F22C4014E400695DFB /* RetrieveStoreResult.swift */,
+			);
+			path = CacheStore;
+			sourceTree = "<group>";
+		};
 		D0A791482C342B34007EBCAB = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +86,7 @@
 		D0A791532C342B34007EBCAB /* Houzz-Pagination */ = {
 			isa = PBXGroup;
 			children = (
+				D04CB4F02C4014C200695DFB /* CacheStore */,
 				D0A791792C34E6BA007EBCAB /* Presenter */,
 				D0A791772C34E69E007EBCAB /* Use Case */,
 				D0A791782C34E6AC007EBCAB /* Entity */,
@@ -192,6 +209,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0A791722C342D55007EBCAB /* UserRemoteRepository.swift in Sources */,
+				D04CB4F62C4014E400695DFB /* CacheStore.swift in Sources */,
+				D04CB4F42C4014E400695DFB /* CacheStoreProtocol.swift in Sources */,
 				D0A791592C342B34007EBCAB /* UserViewController.swift in Sources */,
 				D0A791552C342B34007EBCAB /* AppDelegate.swift in Sources */,
 				D0A791762C342ED8007EBCAB /* UserViewModel.swift in Sources */,
@@ -200,6 +219,7 @@
 				D0A791742C342E2A007EBCAB /* UserUseCase.swift in Sources */,
 				D0A7916B2C342B89007EBCAB /* RequestType.swift in Sources */,
 				D0A7916D2C342B9B007EBCAB /* URLSessionHTTPClient.swift in Sources */,
+				D04CB4F52C4014E400695DFB /* RetrieveStoreResult.swift in Sources */,
 				D0A791702C342BBC007EBCAB /* UserRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
