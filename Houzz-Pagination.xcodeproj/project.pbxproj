@@ -67,6 +67,15 @@
 			path = CacheStore;
 			sourceTree = "<group>";
 		};
+		D04CB4F92C4015B200695DFB /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				D0A7916F2C342BBC007EBCAB /* UserRequest.swift */,
+				D0A791712C342D55007EBCAB /* UserRemoteRepository.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
 		D0A791482C342B34007EBCAB = {
 			isa = PBXGroup;
 			children = (
@@ -122,8 +131,8 @@
 		D0A791782C34E6AC007EBCAB /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				D0A7916F2C342BBC007EBCAB /* UserRequest.swift */,
-				D0A791712C342D55007EBCAB /* UserRemoteRepository.swift */,
+				D04CB4F92C4015B200695DFB /* Remote */,
+				D04CB4F72C40154800695DFB /* UserLocalRepository.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
