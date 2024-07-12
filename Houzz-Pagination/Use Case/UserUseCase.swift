@@ -11,7 +11,9 @@ struct User {
     
     let lastName: String
     
-    init(fromDTO dto: UserDTO) {
+    init(fromDTO dto: UserRemoteDTO) {
+        self.lastName = dto.lastName
+    }
         self.lastName = dto.lastName
     }
 }
