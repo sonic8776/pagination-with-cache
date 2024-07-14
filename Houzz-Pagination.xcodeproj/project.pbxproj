@@ -99,12 +99,12 @@
 		D0A791532C342B34007EBCAB /* Houzz-Pagination */ = {
 			isa = PBXGroup;
 			children = (
-				D0FFE3EC2C43C537006FC2D7 /* Utils */,
-				D04CB4F02C4014C200695DFB /* CacheStore */,
 				D0A791792C34E6BA007EBCAB /* Presenter */,
 				D0A791772C34E69E007EBCAB /* Use Case */,
 				D0A791782C34E6AC007EBCAB /* Entity */,
 				D0A7916E2C342BA1007EBCAB /* Network */,
+				D04CB4F02C4014C200695DFB /* CacheStore */,
+				D0FFE3EC2C43C537006FC2D7 /* Utils */,
 				D0A791542C342B34007EBCAB /* AppDelegate.swift */,
 				D0A791562C342B34007EBCAB /* SceneDelegate.swift */,
 				D0A7915D2C342B35007EBCAB /* Assets.xcassets */,
