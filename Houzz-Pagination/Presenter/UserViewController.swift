@@ -36,7 +36,8 @@ private extension UserViewController {
     func makeViewModel() -> UserViewModel {
         let client = URLSessionHTTPClient(session: .shared)
         let remoteRepo = UserRemoteRepository(client: client)
-        let useCase = UserUseCase(remoteRepo: remoteRepo)
+        let localRepo = UserLocalRepository()
+        let useCase = UserUseCase(remoteRepo: remoteRepo, localRepo: localRepo)
         let viewModel = UserViewModel(useCase: useCase)
         viewModel.delegate = self
         return viewModel
