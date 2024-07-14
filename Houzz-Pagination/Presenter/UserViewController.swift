@@ -36,7 +36,9 @@ private extension UserViewController {
     func makeViewModel() -> UserViewModel {
         let client = URLSessionHTTPClient(session: .shared)
         let remoteRepo = UserRemoteRepository(client: client)
-        let localRepo = UserLocalRepository()
+        let storeURL = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first!.appendingPathComponent("users.json")
+        let store = CacheStore(storeURL: storeURL)
+        let localRepo = UserLocalRepository(store: store)
         let useCase = UserUseCase(remoteRepo: remoteRepo, localRepo: localRepo)
         let viewModel = UserViewModel(useCase: useCase)
         viewModel.delegate = self
