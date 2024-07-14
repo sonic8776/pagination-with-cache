@@ -24,6 +24,7 @@
 		D0A791722C342D55007EBCAB /* UserRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A791712C342D55007EBCAB /* UserRemoteRepository.swift */; };
 		D0A791742C342E2A007EBCAB /* UserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A791732C342E2A007EBCAB /* UserUseCase.swift */; };
 		D0A791762C342ED8007EBCAB /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A791752C342ED8007EBCAB /* UserViewModel.swift */; };
+		D0FFE3EE2C43C550006FC2D7 /* JsonEncoder+codableModelToJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FFE3ED2C43C550006FC2D7 /* JsonEncoder+codableModelToJson.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		D0A791712C342D55007EBCAB /* UserRemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRemoteRepository.swift; sourceTree = "<group>"; };
 		D0A791732C342E2A007EBCAB /* UserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUseCase.swift; sourceTree = "<group>"; };
 		D0A791752C342ED8007EBCAB /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		D0FFE3ED2C43C550006FC2D7 /* JsonEncoder+codableModelToJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JsonEncoder+codableModelToJson.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		D0A791532C342B34007EBCAB /* Houzz-Pagination */ = {
 			isa = PBXGroup;
 			children = (
+				D0FFE3EC2C43C537006FC2D7 /* Utils */,
 				D04CB4F02C4014C200695DFB /* CacheStore */,
 				D0A791792C34E6BA007EBCAB /* Presenter */,
 				D0A791772C34E69E007EBCAB /* Use Case */,
@@ -146,6 +149,14 @@
 				D0A791752C342ED8007EBCAB /* UserViewModel.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D0FFE3EC2C43C537006FC2D7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D0FFE3ED2C43C550006FC2D7 /* JsonEncoder+codableModelToJson.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,6 +236,7 @@
 				D0A791592C342B34007EBCAB /* UserViewController.swift in Sources */,
 				D0A791552C342B34007EBCAB /* AppDelegate.swift in Sources */,
 				D0A791762C342ED8007EBCAB /* UserViewModel.swift in Sources */,
+				D0FFE3EE2C43C550006FC2D7 /* JsonEncoder+codableModelToJson.swift in Sources */,
 				D0A791692C342B6F007EBCAB /* HTTPClient.swift in Sources */,
 				D0A791572C342B34007EBCAB /* SceneDelegate.swift in Sources */,
 				D0A791742C342E2A007EBCAB /* UserUseCase.swift in Sources */,
