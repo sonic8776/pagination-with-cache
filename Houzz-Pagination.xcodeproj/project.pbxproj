@@ -10,6 +10,7 @@
 		D04CB4F42C4014E400695DFB /* CacheStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04CB4F12C4014E300695DFB /* CacheStoreProtocol.swift */; };
 		D04CB4F52C4014E400695DFB /* RetrieveStoreResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04CB4F22C4014E400695DFB /* RetrieveStoreResult.swift */; };
 		D04CB4F62C4014E400695DFB /* CacheStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04CB4F32C4014E400695DFB /* CacheStore.swift */; };
+		D04CB4F82C40154800695DFB /* UserLocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04CB4F72C40154800695DFB /* UserLocalRepository.swift */; };
 		D0A791552C342B34007EBCAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A791542C342B34007EBCAB /* AppDelegate.swift */; };
 		D0A791572C342B34007EBCAB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A791562C342B34007EBCAB /* SceneDelegate.swift */; };
 		D0A791592C342B34007EBCAB /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A791582C342B34007EBCAB /* UserViewController.swift */; };
@@ -29,6 +30,7 @@
 		D04CB4F12C4014E300695DFB /* CacheStoreProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheStoreProtocol.swift; sourceTree = "<group>"; };
 		D04CB4F22C4014E400695DFB /* RetrieveStoreResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetrieveStoreResult.swift; sourceTree = "<group>"; };
 		D04CB4F32C4014E400695DFB /* CacheStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheStore.swift; sourceTree = "<group>"; };
+		D04CB4F72C40154800695DFB /* UserLocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocalRepository.swift; sourceTree = "<group>"; };
 		D0A791512C342B34007EBCAB /* Houzz-Pagination.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Houzz-Pagination.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0A791542C342B34007EBCAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0A791562C342B34007EBCAB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 				D0A7916B2C342B89007EBCAB /* RequestType.swift in Sources */,
 				D0A7916D2C342B9B007EBCAB /* URLSessionHTTPClient.swift in Sources */,
 				D04CB4F52C4014E400695DFB /* RetrieveStoreResult.swift in Sources */,
+				D04CB4F82C40154800695DFB /* UserLocalRepository.swift in Sources */,
 				D0A791702C342BBC007EBCAB /* UserRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
