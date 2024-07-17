@@ -30,6 +30,7 @@
 		D0FFE4922C475A3E006FC2D7 /* UserRemoteDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FFE4912C475A3E006FC2D7 /* UserRemoteDTO.swift */; };
 		D0FFE4952C475B11006FC2D7 /* ImageCacheStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FFE4942C475B11006FC2D7 /* ImageCacheStoreProtocol.swift */; };
 		D0FFE4972C475B5D006FC2D7 /* CacheStoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FFE4962C475B5D006FC2D7 /* CacheStoreError.swift */; };
+		D0FFE4992C47D334006FC2D7 /* DownloadImageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FFE4982C47D334006FC2D7 /* DownloadImageRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		D0FFE4912C475A3E006FC2D7 /* UserRemoteDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRemoteDTO.swift; sourceTree = "<group>"; };
 		D0FFE4942C475B11006FC2D7 /* ImageCacheStoreProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheStoreProtocol.swift; sourceTree = "<group>"; };
 		D0FFE4962C475B5D006FC2D7 /* CacheStoreError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheStoreError.swift; sourceTree = "<group>"; };
+		D0FFE4982C47D334006FC2D7 /* DownloadImageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				D0A7916F2C342BBC007EBCAB /* UserRequest.swift */,
+				D0FFE4982C47D334006FC2D7 /* DownloadImageRequest.swift */,
 				D0A791712C342D55007EBCAB /* UserRemoteRepository.swift */,
 				D0FFE4912C475A3E006FC2D7 /* UserRemoteDTO.swift */,
 			);
@@ -272,6 +275,7 @@
 				D0FFE4902C475A29006FC2D7 /* UserLocalDTO.swift in Sources */,
 				D04CB4F82C40154800695DFB /* UserLocalRepository.swift in Sources */,
 				D0FFE4952C475B11006FC2D7 /* ImageCacheStoreProtocol.swift in Sources */,
+				D0FFE4992C47D334006FC2D7 /* DownloadImageRequest.swift in Sources */,
 				D0A791702C342BBC007EBCAB /* UserRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
