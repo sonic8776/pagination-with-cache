@@ -48,7 +48,7 @@ class UserViewModel {
                 case .success(let users):
                     self.users += users
                     self.delegate?.userViewModel(self, userDidUpdate: self.users)
-                case .failure(let error):
+                case .failure(_):
                     break
                 }
             }

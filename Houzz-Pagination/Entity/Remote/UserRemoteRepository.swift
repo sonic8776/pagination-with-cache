@@ -35,7 +35,7 @@ class UserRemoteRepository: UserRemoteRepositoryProtocol {
                 } catch {
                     completion(.failure(.failedToParseData))
                 }
-            case let .failure(_):
+            case .failure(_):
                 completion(.failure(.networkError))
             }
         }

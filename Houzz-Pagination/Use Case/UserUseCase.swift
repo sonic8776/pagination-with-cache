@@ -29,7 +29,7 @@ enum UserUseCaseError: Error {
 }
 
 protocol UserUseCaseProtocol {
-    func loadUser(fromPage page: Int, completionForViewModel: @escaping ((Result<[User], UserUseCaseError>) -> Void))
+    func loadUser(fromPage page: Int, completion: @escaping ((Result<[User], UserUseCaseError>) -> Void))
 }
 
 class UserUseCase: UserUseCaseProtocol {
@@ -53,7 +53,7 @@ class UserUseCase: UserUseCaseProtocol {
         return (startIndex...endIndex).map { "\($0)"}
     }
     
-    func loadUser(fromPage page: Int, completionForViewModel: @escaping ((Result<[User], UserUseCaseError>) -> Void)) {
+    func loadUser(fromPage page: Int, completion: @escaping ((Result<[User], UserUseCaseError>) -> Void)) {
         let ids = makeIDs(fromPage: page)
         var users = [User]()
         
@@ -86,7 +86,7 @@ class UserUseCase: UserUseCaseProtocol {
                     }
                     return leftUserId < rightUserId
                 }
-                completionForViewModel(.success(sortedUsers))
+                completion(.success(sortedUsers))
                 return
             }
             
@@ -98,13 +98,13 @@ class UserUseCase: UserUseCaseProtocol {
                         self.localRepo.saveUser(fromRemote: userDTO, completion: nil)
                     }
                     let users: [User] = userDTOs.map { .init(fromRemoteDTO: $0) }
-                    completionForViewModel(.success(users))
+                    completion(.success(users))
                 case let .failure(repoError):
                     switch repoError {
                     case .failedToParseData:
-                        completionForViewModel(.failure(.parsingError))
+                        completion(.failure(.parsingError))
                     case .networkError:
-                        completionForViewModel(.failure(.useCaseError))
+                        completion(.failure(.useCaseError))
                     }
                 }
             }
