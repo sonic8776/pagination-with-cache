@@ -25,6 +25,8 @@
 		D0A791742C342E2A007EBCAB /* UserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A791732C342E2A007EBCAB /* UserUseCase.swift */; };
 		D0A791762C342ED8007EBCAB /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A791752C342ED8007EBCAB /* UserViewModel.swift */; };
 		D0FFE3EE2C43C550006FC2D7 /* JsonEncoder+codableModelToJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FFE3ED2C43C550006FC2D7 /* JsonEncoder+codableModelToJson.swift */; };
+		D0FFE44C2C46659B006FC2D7 /* ImageCacheStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FFE44B2C46659B006FC2D7 /* ImageCacheStore.swift */; };
+		D0FFE4952C475B11006FC2D7 /* ImageCacheStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FFE4942C475B11006FC2D7 /* ImageCacheStoreProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		D0A791732C342E2A007EBCAB /* UserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUseCase.swift; sourceTree = "<group>"; };
 		D0A791752C342ED8007EBCAB /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		D0FFE3ED2C43C550006FC2D7 /* JsonEncoder+codableModelToJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JsonEncoder+codableModelToJson.swift"; sourceTree = "<group>"; };
+		D0FFE44B2C46659B006FC2D7 /* ImageCacheStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheStore.swift; sourceTree = "<group>"; };
+		D0FFE4942C475B11006FC2D7 /* ImageCacheStoreProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheStoreProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,8 @@
 				D04CB4F32C4014E400695DFB /* CacheStore.swift */,
 				D04CB4F12C4014E300695DFB /* CacheStoreProtocol.swift */,
 				D04CB4F22C4014E400695DFB /* RetrieveStoreResult.swift */,
+				D0FFE4942C475B11006FC2D7 /* ImageCacheStoreProtocol.swift */,
+				D0FFE44B2C46659B006FC2D7 /* ImageCacheStore.swift */,
 			);
 			path = CacheStore;
 			sourceTree = "<group>";
@@ -234,6 +240,7 @@
 				D04CB4F62C4014E400695DFB /* CacheStore.swift in Sources */,
 				D04CB4F42C4014E400695DFB /* CacheStoreProtocol.swift in Sources */,
 				D0A791592C342B34007EBCAB /* UserViewController.swift in Sources */,
+				D0FFE44C2C46659B006FC2D7 /* ImageCacheStore.swift in Sources */,
 				D0A791552C342B34007EBCAB /* AppDelegate.swift in Sources */,
 				D0A791762C342ED8007EBCAB /* UserViewModel.swift in Sources */,
 				D0FFE3EE2C43C550006FC2D7 /* JsonEncoder+codableModelToJson.swift in Sources */,
@@ -244,6 +251,7 @@
 				D0A7916D2C342B9B007EBCAB /* URLSessionHTTPClient.swift in Sources */,
 				D04CB4F52C4014E400695DFB /* RetrieveStoreResult.swift in Sources */,
 				D04CB4F82C40154800695DFB /* UserLocalRepository.swift in Sources */,
+				D0FFE4952C475B11006FC2D7 /* ImageCacheStoreProtocol.swift in Sources */,
 				D0A791702C342BBC007EBCAB /* UserRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
