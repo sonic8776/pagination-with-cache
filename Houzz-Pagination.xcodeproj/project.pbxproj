@@ -26,7 +26,10 @@
 		D0A791762C342ED8007EBCAB /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A791752C342ED8007EBCAB /* UserViewModel.swift */; };
 		D0FFE3EE2C43C550006FC2D7 /* JsonEncoder+codableModelToJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FFE3ED2C43C550006FC2D7 /* JsonEncoder+codableModelToJson.swift */; };
 		D0FFE44C2C46659B006FC2D7 /* ImageCacheStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FFE44B2C46659B006FC2D7 /* ImageCacheStore.swift */; };
+		D0FFE4902C475A29006FC2D7 /* UserLocalDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FFE48F2C475A29006FC2D7 /* UserLocalDTO.swift */; };
+		D0FFE4922C475A3E006FC2D7 /* UserRemoteDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FFE4912C475A3E006FC2D7 /* UserRemoteDTO.swift */; };
 		D0FFE4952C475B11006FC2D7 /* ImageCacheStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FFE4942C475B11006FC2D7 /* ImageCacheStoreProtocol.swift */; };
+		D0FFE4972C475B5D006FC2D7 /* CacheStoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FFE4962C475B5D006FC2D7 /* CacheStoreError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,7 +54,10 @@
 		D0A791752C342ED8007EBCAB /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		D0FFE3ED2C43C550006FC2D7 /* JsonEncoder+codableModelToJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JsonEncoder+codableModelToJson.swift"; sourceTree = "<group>"; };
 		D0FFE44B2C46659B006FC2D7 /* ImageCacheStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheStore.swift; sourceTree = "<group>"; };
+		D0FFE48F2C475A29006FC2D7 /* UserLocalDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocalDTO.swift; sourceTree = "<group>"; };
+		D0FFE4912C475A3E006FC2D7 /* UserRemoteDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRemoteDTO.swift; sourceTree = "<group>"; };
 		D0FFE4942C475B11006FC2D7 /* ImageCacheStoreProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheStoreProtocol.swift; sourceTree = "<group>"; };
+		D0FFE4962C475B5D006FC2D7 /* CacheStoreError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheStoreError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,9 +74,10 @@
 		D04CB4F02C4014C200695DFB /* CacheStore */ = {
 			isa = PBXGroup;
 			children = (
-				D04CB4F32C4014E400695DFB /* CacheStore.swift */,
-				D04CB4F12C4014E300695DFB /* CacheStoreProtocol.swift */,
 				D04CB4F22C4014E400695DFB /* RetrieveStoreResult.swift */,
+				D04CB4F12C4014E300695DFB /* CacheStoreProtocol.swift */,
+				D0FFE4962C475B5D006FC2D7 /* CacheStoreError.swift */,
+				D04CB4F32C4014E400695DFB /* CacheStore.swift */,
 				D0FFE4942C475B11006FC2D7 /* ImageCacheStoreProtocol.swift */,
 				D0FFE44B2C46659B006FC2D7 /* ImageCacheStore.swift */,
 			);
@@ -82,6 +89,7 @@
 			children = (
 				D0A7916F2C342BBC007EBCAB /* UserRequest.swift */,
 				D0A791712C342D55007EBCAB /* UserRemoteRepository.swift */,
+				D0FFE4912C475A3E006FC2D7 /* UserRemoteDTO.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -143,7 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				D04CB4F92C4015B200695DFB /* Remote */,
-				D04CB4F72C40154800695DFB /* UserLocalRepository.swift */,
+				D0FFE4932C475A4D006FC2D7 /* Local */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -163,6 +171,15 @@
 				D0FFE3ED2C43C550006FC2D7 /* JsonEncoder+codableModelToJson.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		D0FFE4932C475A4D006FC2D7 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				D04CB4F72C40154800695DFB /* UserLocalRepository.swift */,
+				D0FFE48F2C475A29006FC2D7 /* UserLocalDTO.swift */,
+			);
+			path = Local;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,6 +259,7 @@
 				D0A791592C342B34007EBCAB /* UserViewController.swift in Sources */,
 				D0FFE44C2C46659B006FC2D7 /* ImageCacheStore.swift in Sources */,
 				D0A791552C342B34007EBCAB /* AppDelegate.swift in Sources */,
+				D0FFE4922C475A3E006FC2D7 /* UserRemoteDTO.swift in Sources */,
 				D0A791762C342ED8007EBCAB /* UserViewModel.swift in Sources */,
 				D0FFE3EE2C43C550006FC2D7 /* JsonEncoder+codableModelToJson.swift in Sources */,
 				D0A791692C342B6F007EBCAB /* HTTPClient.swift in Sources */,
@@ -250,6 +268,8 @@
 				D0A7916B2C342B89007EBCAB /* RequestType.swift in Sources */,
 				D0A7916D2C342B9B007EBCAB /* URLSessionHTTPClient.swift in Sources */,
 				D04CB4F52C4014E400695DFB /* RetrieveStoreResult.swift in Sources */,
+				D0FFE4972C475B5D006FC2D7 /* CacheStoreError.swift in Sources */,
+				D0FFE4902C475A29006FC2D7 /* UserLocalDTO.swift in Sources */,
 				D04CB4F82C40154800695DFB /* UserLocalRepository.swift in Sources */,
 				D0FFE4952C475B11006FC2D7 /* ImageCacheStoreProtocol.swift in Sources */,
 				D0A791702C342BBC007EBCAB /* UserRequest.swift in Sources */,

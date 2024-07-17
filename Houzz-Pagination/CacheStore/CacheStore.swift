@@ -30,6 +30,8 @@ class CacheStore: CacheStoreProtocol {
         }
     }
     
+    // 若有實作 expiry 機制，在 loadFromStore, saveToStore, retrieve 時檢查
+    
     func loadFromStore(completion: @escaping (Result<Cache, CacheStoreError>) -> Void) {
         do {
             let data = try Data(contentsOf: self.storeURL)
@@ -56,6 +58,8 @@ class CacheStore: CacheStoreProtocol {
     }
     
     func insert(withID id: String, json: Any) {
+        // follow LRU: update last used date
+        // json add field "lastModifiedDate"
         cache[id] = json
     }
     
@@ -64,6 +68,7 @@ class CacheStore: CacheStoreProtocol {
             completion(.empty)
             return
         }
+        // follow LRU: update last used date
         completion(.found(json))
     }
     

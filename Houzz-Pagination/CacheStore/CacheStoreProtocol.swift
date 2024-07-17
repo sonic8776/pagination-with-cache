@@ -7,11 +7,6 @@
 
 import Foundation
 
-enum CacheStoreError: Error {
-    case failureLoadCache
-    case failureSaveCache
-}
-
 protocol CacheStoreProtocol {
     func loadFromStore(completion: @escaping (Result<[String: Any], CacheStoreError>) -> Void)
     func saveToStore(completion: @escaping (Result<Void, CacheStoreError>) -> Void)
