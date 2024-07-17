@@ -31,6 +31,7 @@
 		D0FFE4952C475B11006FC2D7 /* ImageCacheStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FFE4942C475B11006FC2D7 /* ImageCacheStoreProtocol.swift */; };
 		D0FFE4972C475B5D006FC2D7 /* CacheStoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FFE4962C475B5D006FC2D7 /* CacheStoreError.swift */; };
 		D0FFE4992C47D334006FC2D7 /* DownloadImageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FFE4982C47D334006FC2D7 /* DownloadImageRequest.swift */; };
+		D0FFE49B2C47D3BB006FC2D7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FFE49A2C47D3BB006FC2D7 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		D0FFE4942C475B11006FC2D7 /* ImageCacheStoreProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheStoreProtocol.swift; sourceTree = "<group>"; };
 		D0FFE4962C475B5D006FC2D7 /* CacheStoreError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheStoreError.swift; sourceTree = "<group>"; };
 		D0FFE4982C47D334006FC2D7 /* DownloadImageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageRequest.swift; sourceTree = "<group>"; };
+		D0FFE49A2C47D3BB006FC2D7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				D0A791732C342E2A007EBCAB /* UserUseCase.swift */,
+				D0FFE49A2C47D3BB006FC2D7 /* User.swift */,
 			);
 			path = "Use Case";
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				D0A791762C342ED8007EBCAB /* UserViewModel.swift in Sources */,
 				D0FFE3EE2C43C550006FC2D7 /* JsonEncoder+codableModelToJson.swift in Sources */,
 				D0A791692C342B6F007EBCAB /* HTTPClient.swift in Sources */,
+				D0FFE49B2C47D3BB006FC2D7 /* User.swift in Sources */,
 				D0A791572C342B34007EBCAB /* SceneDelegate.swift in Sources */,
 				D0A791742C342E2A007EBCAB /* UserUseCase.swift in Sources */,
 				D0A7916B2C342B89007EBCAB /* RequestType.swift in Sources */,

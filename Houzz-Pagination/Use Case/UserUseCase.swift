@@ -5,23 +5,6 @@
 //  Created by Judy Tsai on 2024/7/2.
 //
 
-import Foundation
-
-struct User {
-    
-    let id: String
-    let lastName: String
-    
-    init(fromRemoteDTO dto: UserRemoteDTO) {
-        self.id = dto.id
-        self.lastName = dto.lastName
-    }
-    
-    init(fromLocalDTO dto: UserLocalDTO) {
-        self.id = dto.id
-        self.lastName = dto.lastName
-    }
-}
 
 enum UserUseCaseError: Error {
     case useCaseError
