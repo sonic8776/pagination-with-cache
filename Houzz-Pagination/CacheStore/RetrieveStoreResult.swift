@@ -10,4 +10,5 @@ import Foundation
 enum RetrieveStoreResult {
     case empty
     case found(Any)
+    case parsingError
 }
