@@ -5,6 +5,7 @@
 //  Created by Judy Tsai on 2024/7/2.
 //
 
+import UIKit
 
 enum UserUseCaseError: Error {
     case useCaseError
@@ -40,23 +41,36 @@ class UserUseCase: UserUseCaseProtocol {
         let ids = makeIDs(fromPage: page)
         var users = [User]()
         
-        ids.forEach {
+        ids.forEach { id in
             dispatchGroup.enter()
-            localRepo.loadUser(withID: $0) { [weak self] result in
+            localRepo.loadUser(withID: id) { [weak self] result in
                 guard let self else { return }
-                self.dispatchGroup.leave()
                 
                 switch result {
                 case let .found(localDTO):
-                    let user = User(fromLocalDTO: localDTO)
-                    users.append(user)
+                    var user = User(fromLocalDTO: localDTO)
+                    
+                    self.localRepo.loadUserImage(wtihID: id) { result in
+                        defer { self.dispatchGroup.leave() }
+                        
+                        switch result {
+                        case .success(let imageData):
+                            user.image = UIImage(data: imageData)
+                        default:
+                            print("Failed to load image with id \(id)")
+                            return
+                        }
+                        users.append(user)
+                    }
+                    
                 default:
-                    return
+                    self.dispatchGroup.leave()
                 }
             }
         }
         
         dispatchGroup.notify(queue: .main) {
+            // 從 localRepo 已經讀取完 user 資料，檢查若 users 數量和 ids 一致，則視為讀取 cache 成功，回傳 users 並 return
             if users.count == ids.count {
                 // "aaa", "1" -> "aaa", "1"
                 // "2", "1" -> "1", "2"
@@ -73,18 +87,40 @@ class UserUseCase: UserUseCaseProtocol {
                 return
             }
             
-            self.remoteRepo.requestUser(fromPage: page) { result in
+            // 只要數目對不起來，就直接讓 remoteRepo 重新 request 整頁的 users
+            self.remoteRepo.requestUser(fromPage: page) { [weak self] result in
+                guard let self else { return }
+                
                 switch result {
                 case let .success(userDTOs):
                     // save to store
                     for userDTO in userDTOs {
-                        self.localRepo.saveUser(fromRemote: userDTO, completion: nil)
+                        self.dispatchGroup.enter()
+                        self.localRepo.saveUser(fromRemote: userDTO) { _ in
+                            
+                            var user = User(fromRemoteDTO: userDTO)
+                            self.remoteRepo.downloadImage(fromURL: userDTO.avatar) { downloadResult in
+                                defer { self.dispatchGroup.leave() }
+                                switch downloadResult {
+                                case .success(let data):
+                                    user.image = UIImage(data: data)
+                                    self.localRepo.saveUserImage(withID: userDTO.id, imageData: data, completion: nil)
+                                    
+                                case .failure(let error):
+                                    print("Failed to download image from \(userDTO.avatar): \(error)")
+                                }
+                                users.append(user)
+                            }
+                        }
                     }
-                    let users: [User] = userDTOs.map { .init(fromRemoteDTO: $0) }
-                    completion(.success(users))
+                    
+                    self.dispatchGroup.notify(queue: .main) {
+                        completion(.success(users))
+                    }
+                    
                 case let .failure(repoError):
                     switch repoError {
-                    case .failedToParseData:
+                    case .failedToParseData, .failedToParseURL:
                         completion(.failure(.parsingError))
                     case .networkError:
                         completion(.failure(.useCaseError))
