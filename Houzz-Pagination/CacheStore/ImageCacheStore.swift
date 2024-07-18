@@ -34,7 +34,7 @@ class ImageCacheStore: ImageCacheStoreProtocol {
         }
     }
     
-    // Load image URLs from store (JSON file)
+    // Load image URLs from store (imageURLs.json file)
     func loadFromStore(completion: @escaping (Result<[String : Any], CacheStoreError>) -> Void) {
         do {
             // 讀取 Cache folder url 內容並轉成 Data
@@ -73,11 +73,11 @@ class ImageCacheStore: ImageCacheStoreProtocol {
     func insert(withID id: String, imageData: Data) {
         do {
             // 1. save image to file and get file url
-            let fileURL = cacheDirectory.appending(path: "\(id).jpg")
+            let fileURL = cacheDirectory.appendingPathComponent("\(id).jpg")
             try imageData.write(to: fileURL)
             
-            // 2. cache[id] = file url
-            cache[id] = fileURL.path()
+            // 2. cache[id] = file name
+            cache[id] = "\(id).jpg"
             
         } catch {
             print("Error insert image file: \(error)")
@@ -86,12 +86,12 @@ class ImageCacheStore: ImageCacheStoreProtocol {
     
     // Get image file and convert to data
     func retrieve(withID id: String, completion: @escaping (RetrieveStoreResult) -> Void) {
-        guard let imageFilePath = cache[id] as? String else {
+        guard let imageFileName = cache[id] as? String else {
             completion(.empty)
             return
         }
         
-        let imageFileURL = URL(filePath: imageFilePath)
+        let imageFileURL = cacheDirectory.appendingPathComponent(imageFileName)
         
         do {
             // parse image file url to image data and pass

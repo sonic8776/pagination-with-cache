@@ -38,7 +38,7 @@ private extension UserViewController {
         let remoteRepo = UserRemoteRepository(client: client)
         let storeURL = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first!.appendingPathComponent("users.json")
         let store = CacheStore(storeURL: storeURL)
-        let imageStoreURL = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first!.appendingPathComponent("imageURLs.json")
+        let imageStoreURL = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first!.appendingPathComponent("imageFileNames.json")
         let imageStore = ImageCacheStore(storeURL: imageStoreURL)
         let localRepo = UserLocalRepository(store: store, imageStore: imageStore)
         let useCase = UserUseCase(remoteRepo: remoteRepo, localRepo: localRepo)
