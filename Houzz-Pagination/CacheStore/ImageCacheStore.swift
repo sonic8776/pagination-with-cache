@@ -105,11 +105,11 @@ class ImageCacheStore: ImageCacheStoreProtocol {
     
     // Delete image file
     func delete(withID id: String) {
-        guard let imageFilePath = cache[id] as? String else {
+        guard let imageFileName = cache[id] as? String else {
             return
         }
         
-        let imageFileURL = URL(filePath: imageFilePath)
+        let imageFileURL = cacheDirectory.appendingPathComponent(imageFileName)
         
         do {
             try FileManager.default.removeItem(at: imageFileURL)
