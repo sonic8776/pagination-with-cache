@@ -5,7 +5,7 @@
 //  Created by Judy Tsai on 2024/7/17.
 //
 
-import Foundation
+import UIKit
 
 struct User {
     
