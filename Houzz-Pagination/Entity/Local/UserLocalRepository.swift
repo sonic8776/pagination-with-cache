@@ -10,18 +10,23 @@ import Foundation
 enum UserLocalRepositoryResult {
     case empty
     case found(UserLocalDTO)
-    case decodeError
-    case encodeError
-    case saveError
+    case loadError
+    case deleteError
 }
 
 enum UserLocalRepositoryError: Error {
+    case encodeError
+    case saveError
+    case loadImageError
     case deleteError
 }
 
 protocol UserLocalRepositoryProtocol {
     func loadUser(withID id: String, completion: @escaping (UserLocalRepositoryResult) -> Void)
-    func saveUser(fromRemote user: UserRemoteDTO, completion: ((UserLocalRepositoryResult) -> Void)?)
+    func saveUser(fromRemote user: UserRemoteDTO, completion: ((Result<Void, UserLocalRepositoryError>) -> Void)?)
+    func loadUserImage(wtihID id: String, completion: @escaping (Result<Data, UserLocalRepositoryError>) -> Void)
+    func saveUserImage(withID id: String, imageData data: Data, completion: ((Result<Void, UserLocalRepositoryError>) -> Void)?)
+    func deleteUserImage(withID id: String, completion: @escaping (Result<Void, UserLocalRepositoryError>) -> Void)
 }
 
 class UserLocalRepository: UserLocalRepositoryProtocol {
@@ -50,31 +55,64 @@ class UserLocalRepository: UserLocalRepositoryProtocol {
         }
     }
     
-    func saveUser(fromRemote user: UserRemoteDTO, completion: ((UserLocalRepositoryResult) -> Void)?) {
+    func saveUser(fromRemote user: UserRemoteDTO, completion: ((Result<Void, UserLocalRepositoryError>) -> Void)?) {
         let id = user.id
         guard let json = JSONEncoder().toJson(from: user) else {
-            completion?(.encodeError)
+            completion?(.failure(.encodeError))
             return
         }
         store.insert(withID: id, json: json)
         store.saveToStore { result in
             switch result {
             case .success(()):
-                break
+                print("Did save users to store!")
+                completion?(.success(()))
             case .failure(_):
-                completion?(.saveError)
+                completion?(.failure(.saveError))
             }
         }
     }
     
     // MARK: - Image
     
-    func loadUserImage(wtihID id: String, completion: @escaping (Data) -> Void) {
-        
+    func loadUserImage(wtihID id: String, completion: @escaping (Result<Data, UserLocalRepositoryError>) -> Void) {
+        imageStore.retrieve(withID: id) { result in
+            switch result {
+            case .found(let imageData):
+                if let data = imageData as? Data {
+                    completion(.success(data))
+                } else {
+                    completion(.failure(.loadImageError))
+                }
+                
+            default:
+                completion(.failure(.loadImageError))
+            }
+        }
+    }
+    
+    func saveUserImage(withID id: String, imageData data: Data, completion: ((Result<Void, UserLocalRepositoryError>) -> Void)?) {
+        imageStore.insert(withID: id, imageData: data)
+        imageStore.saveToStore { result in
+            switch result {
+            case .success():
+                completion?(.success(()))
+            case .failure(_):
+                completion?(.failure(.saveError))
+            }
+        }
     }
     
     // expiry
     func deleteUserImage(withID id: String, completion: @escaping (Result<Void, UserLocalRepositoryError>) -> Void) {
-        
+        imageStore.delete(withID: id)
+        imageStore.saveToStore { result in
+            switch result {
+            case .success():
+                completion(.success(()))
+            case .failure(_):
+                completion(.failure(.deleteError))
+            }
+        }
     }
 }
