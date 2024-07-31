@@ -55,7 +55,7 @@ class UserUseCase: UserUseCaseProtocol {
                         
                         switch result {
                         case .success(let imageData):
-                            user.image = UIImage(data: imageData)
+                            user.imageData = imageData
                         default:
                             print("Failed to load image with id \(id)")
                             return
@@ -103,7 +103,7 @@ class UserUseCase: UserUseCaseProtocol {
                                 defer { self.dispatchGroup.leave() }
                                 switch downloadResult {
                                 case .success(let data):
-                                    user.image = UIImage(data: data)
+                                    user.imageData = data
                                     self.localRepo.saveUserImage(withID: userDTO.id, imageData: data, completion: nil)
                                     
                                 case .failure(let error):

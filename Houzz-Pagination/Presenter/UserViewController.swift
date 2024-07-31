@@ -57,7 +57,9 @@ extension UserViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: .init(describing: UITableViewCell.self), for: indexPath)
         let fullName = viewModel.users[indexPath.row].firstName + " " + viewModel.users[indexPath.row].lastName
         cell.textLabel?.text = fullName
-        cell.imageView?.image = viewModel.users[indexPath.row].image
+        if let imageData = viewModel.users[indexPath.row].imageData {
+            cell.imageView?.image = UIImage(data: imageData)            
+        }
         return cell
     }
 }
