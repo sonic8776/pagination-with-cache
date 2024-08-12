@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import JTNetworkModule
 
 enum UserViewModelError: Error {
     case viewModelError

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import JTNetworkModule
 
 // https://620962796df46f0017f4c4db.mockapi.io/users/userList?page=1&limit=10
 struct UserRequest: RequestType {
@@ -14,12 +15,7 @@ struct UserRequest: RequestType {
     
     var path: String { "/users/userList" }
     
-    var queryItems: [URLQueryItem] {
-        [
-            .init(name: "page", value: "\(page)"),
-            .init(name: "limit", value: "\(limit)")
-        ]
-    }
+    var queryItems: [URLQueryItem]
     
     var method: HTTPMethod { .get }
     
@@ -31,6 +27,10 @@ struct UserRequest: RequestType {
     
     init(page: Int) {
         self.page = page
+        self.queryItems = [
+            .init(name: "page", value: "\(page)"),
+            .init(name: "limit", value: "\(limit)")
+        ]
         if self.page > limit {
             self.page = limit
         }

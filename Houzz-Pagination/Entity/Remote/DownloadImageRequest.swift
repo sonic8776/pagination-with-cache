@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import JTNetworkModule
 
 struct DownloadImageRequest: RequestType {
     
@@ -13,7 +14,7 @@ struct DownloadImageRequest: RequestType {
     
     var path: String { "" }
     
-    var queryItems: [URLQueryItem] { [] }
+    var queryItems: [URLQueryItem] = []
     
     var method: HTTPMethod { .get }
     

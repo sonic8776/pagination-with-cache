@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D0256CD82C6712D70048F0EB /* JTNetworkModule in Frameworks */ = {isa = PBXBuildFile; productRef = D0256CD72C6712D70048F0EB /* JTNetworkModule */; };
+		D0256CDB2C6713E90048F0EB /* JTNetworkModule in Frameworks */ = {isa = PBXBuildFile; productRef = D0256CDA2C6713E90048F0EB /* JTNetworkModule */; };
 		D04CB4F42C4014E400695DFB /* CacheStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04CB4F12C4014E300695DFB /* CacheStoreProtocol.swift */; };
 		D04CB4F52C4014E400695DFB /* RetrieveStoreResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04CB4F22C4014E400695DFB /* RetrieveStoreResult.swift */; };
 		D04CB4F62C4014E400695DFB /* CacheStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04CB4F32C4014E400695DFB /* CacheStore.swift */; };
@@ -17,9 +19,6 @@
 		D0A7915C2C342B34007EBCAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0A7915A2C342B34007EBCAB /* Main.storyboard */; };
 		D0A7915E2C342B35007EBCAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0A7915D2C342B35007EBCAB /* Assets.xcassets */; };
 		D0A791612C342B35007EBCAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0A7915F2C342B35007EBCAB /* LaunchScreen.storyboard */; };
-		D0A791692C342B6F007EBCAB /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A791682C342B6F007EBCAB /* HTTPClient.swift */; };
-		D0A7916B2C342B89007EBCAB /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A7916A2C342B89007EBCAB /* RequestType.swift */; };
-		D0A7916D2C342B9B007EBCAB /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A7916C2C342B9B007EBCAB /* URLSessionHTTPClient.swift */; };
 		D0A791702C342BBC007EBCAB /* UserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A7916F2C342BBC007EBCAB /* UserRequest.swift */; };
 		D0A791722C342D55007EBCAB /* UserRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A791712C342D55007EBCAB /* UserRemoteRepository.swift */; };
 		D0A791742C342E2A007EBCAB /* UserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A791732C342E2A007EBCAB /* UserUseCase.swift */; };
@@ -47,9 +46,6 @@
 		D0A7915D2C342B35007EBCAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0A791602C342B35007EBCAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0A791622C342B35007EBCAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D0A791682C342B6F007EBCAB /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
-		D0A7916A2C342B89007EBCAB /* RequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
-		D0A7916C2C342B9B007EBCAB /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 		D0A7916F2C342BBC007EBCAB /* UserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequest.swift; sourceTree = "<group>"; };
 		D0A791712C342D55007EBCAB /* UserRemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRemoteRepository.swift; sourceTree = "<group>"; };
 		D0A791732C342E2A007EBCAB /* UserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUseCase.swift; sourceTree = "<group>"; };
@@ -69,6 +65,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0256CD82C6712D70048F0EB /* JTNetworkModule in Frameworks */,
+				D0256CDB2C6713E90048F0EB /* JTNetworkModule in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,7 +119,6 @@
 				D0A791792C34E6BA007EBCAB /* Presenter */,
 				D0A791772C34E69E007EBCAB /* Use Case */,
 				D0A791782C34E6AC007EBCAB /* Entity */,
-				D0A7916E2C342BA1007EBCAB /* Network */,
 				D04CB4F02C4014C200695DFB /* CacheStore */,
 				D0FFE3EC2C43C537006FC2D7 /* Utils */,
 				D0A791542C342B34007EBCAB /* AppDelegate.swift */,
@@ -132,16 +129,6 @@
 				D0A791622C342B35007EBCAB /* Info.plist */,
 			);
 			path = "Houzz-Pagination";
-			sourceTree = "<group>";
-		};
-		D0A7916E2C342BA1007EBCAB /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				D0A791682C342B6F007EBCAB /* HTTPClient.swift */,
-				D0A7916A2C342B89007EBCAB /* RequestType.swift */,
-				D0A7916C2C342B9B007EBCAB /* URLSessionHTTPClient.swift */,
-			);
-			path = Network;
 			sourceTree = "<group>";
 		};
 		D0A791772C34E69E007EBCAB /* Use Case */ = {
@@ -204,6 +191,10 @@
 			dependencies = (
 			);
 			name = "Houzz-Pagination";
+			packageProductDependencies = (
+				D0256CD72C6712D70048F0EB /* JTNetworkModule */,
+				D0256CDA2C6713E90048F0EB /* JTNetworkModule */,
+			);
 			productName = "Houzz-Pagination";
 			productReference = D0A791512C342B34007EBCAB /* Houzz-Pagination.app */;
 			productType = "com.apple.product-type.application";
@@ -232,6 +223,9 @@
 				Base,
 			);
 			mainGroup = D0A791482C342B34007EBCAB;
+			packageReferences = (
+				D0256CD92C6713E90048F0EB /* XCLocalSwiftPackageReference "../JTNetworkModule" */,
+			);
 			productRefGroup = D0A791522C342B34007EBCAB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -268,12 +262,9 @@
 				D0FFE4922C475A3E006FC2D7 /* UserRemoteDTO.swift in Sources */,
 				D0A791762C342ED8007EBCAB /* UserViewModel.swift in Sources */,
 				D0FFE3EE2C43C550006FC2D7 /* JsonEncoder+codableModelToJson.swift in Sources */,
-				D0A791692C342B6F007EBCAB /* HTTPClient.swift in Sources */,
 				D0FFE49B2C47D3BB006FC2D7 /* User.swift in Sources */,
 				D0A791572C342B34007EBCAB /* SceneDelegate.swift in Sources */,
 				D0A791742C342E2A007EBCAB /* UserUseCase.swift in Sources */,
-				D0A7916B2C342B89007EBCAB /* RequestType.swift in Sources */,
-				D0A7916D2C342B9B007EBCAB /* URLSessionHTTPClient.swift in Sources */,
 				D04CB4F52C4014E400695DFB /* RetrieveStoreResult.swift in Sources */,
 				D0FFE4972C475B5D006FC2D7 /* CacheStoreError.swift in Sources */,
 				D0FFE4902C475A29006FC2D7 /* UserLocalDTO.swift in Sources */,
@@ -503,6 +494,24 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		D0256CD92C6713E90048F0EB /* XCLocalSwiftPackageReference "../JTNetworkModule" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../JTNetworkModule;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D0256CD72C6712D70048F0EB /* JTNetworkModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = JTNetworkModule;
+		};
+		D0256CDA2C6713E90048F0EB /* JTNetworkModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = JTNetworkModule;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D0A791492C342B34007EBCAB /* Project object */;
 }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import JTNetworkModule
 
 class UserViewController: UIViewController {
     

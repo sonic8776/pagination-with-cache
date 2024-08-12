@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import JTNetworkModule
 
 enum UserRemoteRepositoryError: Error {
     case failedToParseData
